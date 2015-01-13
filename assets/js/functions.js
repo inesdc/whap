@@ -11,8 +11,22 @@ $(document).ready(function(){
     	$('#main').removeClass('chat-visible');
     };
   });
+
+  //Mantain aspect ratio
+
+	var a_r = 1.1143;
+	var width = $('.module').width(); 
+	$('.module').css("height", width / a_r);
+
+	$(window).resize(function(){
+		var a_r = 1.1143;
+		var width = $('.module').width(); 
+		$('.module').css("height", width / a_r);
+	});
   
 });
+
+
 
 
 
