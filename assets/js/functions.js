@@ -5,12 +5,16 @@ $(document).ready(function(){
   });
 
   $(window).resize(function(){
-    if($(window).width() > 1280){
-      $('#main').removeClass('chat-visible');
+    if($(window).width() > 1340){
+      $('#main').addClass('chat-visible');
+    } else {
+    	$('#main').removeClass('chat-visible');
     };
   });
   
 });
+
+
 
 /*
 function height(object1, object2) {
