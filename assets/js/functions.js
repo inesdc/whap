@@ -4,9 +4,20 @@ $(document).ready(function(){
     $('#main').toggleClass('chat-visible');
   });
 
+  var new_container_margin = ($(window).width()-1364)/2;
+  if($(window).width() > 1340){
+      $('.container').css("margin-left", new_container_margin);
+      $('#main').addClass('chat-visible');
+      $('.secondary-nav').css("padding-left", new_container_margin);
+      $('.secondary-nav').css("padding-right", new_container_margin);
+    };
+
   $(window).resize(function(){
+    var new_container_margin = ($(window).width()-1364)/2;
     if($(window).width() > 1340){
       $('#main').addClass('chat-visible');
+      $('.container').css("margin-left", new_container_margin);
+      $('.secondary-nav').css("padding-left", new_container_margin)
     } else {
     	$('#main').removeClass('chat-visible');
     };
@@ -23,6 +34,7 @@ $(document).ready(function(){
 		var width = $('.module').width(); 
 		$('.module').css("height", width / a_r);
 	});
+
   
 });
 
